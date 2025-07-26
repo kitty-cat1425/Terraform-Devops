@@ -6,7 +6,7 @@ provider "aws" {
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.0"
-  name = "suchita-vpc"
+  name = "pratik-vpc"
   cidr = "10.0.0.0/16"
   azs             = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
   private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
@@ -21,7 +21,7 @@ module "vpc" {
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
   version         = "20.10.0"
-  cluster_name    = "suchita-cluster"
+  cluster_name    = "pratik-cluster"
   cluster_version = "1.29"
   vpc_id          = module.vpc.vpc_id
   subnet_ids      = module.vpc.private_subnets
