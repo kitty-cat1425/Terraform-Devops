@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask-app
-          image: suchitaa/flask-app:latest
+          image: pratik/flask-app:latest
           env:
             - name: PASSWORD
               valueFrom:
